@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import TrackerContainer from "../containers/TrackerContainer";
 
 export default function Home() {
   return (
@@ -53,6 +54,7 @@ export default function Home() {
       </Head>
 
       <main>
+        <TrackerContainer />
       </main>
     </>
   )

@@ -1,73 +1,95 @@
 
 .tracker {
+  position: relative;
   text-align: center;
 
-  .title {
-    font-weight: 500;
-    font-size: 26px;
-    line-height: 30px;
-    letter-spacing: -0.232143px;
-    color: #FFFFFF;
-    margin-bottom: 29px;
-  }
+  .container {
+    height: 250px;
 
-  .form {
-    display: flex;
-    position: relative;
-    height: 58px;
-    margin-bottom: 24px;
-    border-radius: 15px;
-    overflow: hidden;
-
-    .input {
-      flex: 1;
-      background: #FFFFFF;
-      box-shadow: 0px 50px 50px -25px rgba(0, 0, 0, 0.0983665);
-      border: none;
-      outline: none;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 21px;
-      color: #2C2C2C;
-      padding: 0 24px;
+    .title {
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 30px;
+      letter-spacing: -0.232143px;
+      color: #FFFFFF;
+      margin-bottom: 29px;
     }
 
-    .submitButton {
+    .form {
+      display: flex;
+      position: relative;
+      height: 58px;
+      margin-bottom: 24px;
+      border-radius: 15px;
+      overflow: hidden;
+
+      .input {
+        flex: 1;
+        background: #FFFFFF;
+        box-shadow: 0px 50px 50px -25px rgba(0, 0, 0, 0.0983665);
+        border: none;
+        outline: none;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 21px;
+        color: #2C2C2C;
+        padding: 0 24px;
+      }
+
+      .submitButton {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #000000;
+        border: 0;
+        width: 58px;
+        height: 100%;
+      }
+    }
+
+    .infoBox {
       position: absolute;
       top: 0;
-      right: 0;
-      background: #000000;
-      border: 0;
-      width: 58px;
-      height: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(50%);
+      width: 327px;
+      background: #FFFFFF;
+      box-shadow: 0px 50px 50px -25px rgba(0, 0, 0, 0.0983665);
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      grid-gap: 24px;
+      padding: 26px 24px 24px;
+      z-index: 999;
+
+      .header {
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: 1.45833px;
+        text-transform: uppercase;
+        color: rgba(44, 44, 44, 0.59);
+        margin-bottom: 7px;
+      }
+
+      .content {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: -0.178571px;
+        color: #2C2C2C;
+      }
     }
   }
 
-  .infoBox {
-    background: #FFFFFF;
-    box-shadow: 0px 50px 50px -25px rgba(0, 0, 0, 0.0983665);
-    border-radius: 15px;
+  .mapWrapper {
+    flex: 1;
     display: flex;
-    flex-direction: column;
-    grid-gap: 24px;
-    padding: 26px 24px 24px;
+    width: 100vw;
+    height: 100vh;
 
-    .header {
-      font-weight: bold;
-      font-size: 10px;
-      line-height: 12px;
-      letter-spacing: 1.45833px;
-      text-transform: uppercase;
-      color: rgba(44, 44, 44, 0.59);
-      margin-bottom: 7px;
-    }
-
-    .content {
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 24px;
-      letter-spacing: -0.178571px;
-      color: #2C2C2C;
+    > div {
+      flex: 1;
     }
   }
 }

@@ -1,9 +1,12 @@
 import React from "react";
-import styles from './style.module.scss';
 
 const Container = ({ children, ...props }) => {
     return (
-        <div className={styles.container}
+        <div style={{
+            position: 'relative',
+            padding: '26px 24px',
+            width: '100%',
+        }}
              {...props}
         >
             {children}
