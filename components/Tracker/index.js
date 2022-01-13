@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 
 const Tracker = ({
                      ip, location, timezone, isp,
-                     lat, lng
+                     lat, lng, onSubmit
                  }) => {
     const Map = React.useMemo(() => dynamic(
         () => import('../Map'), // replace '@components/map' with your component's location
@@ -13,7 +13,7 @@ const Tracker = ({
             loading: () => <p>A map is loading</p>,
             ssr: false // This line is important. It's what prevents server-side render
         }
-    ), [/* list variables which should trigger a re-render here */]);
+    ), [lat, lng]);
 
     return (
         <div className={styles.tracker}>
@@ -21,9 +21,12 @@ const Tracker = ({
                 <h1 className={styles.title}>
                     IP Address Tracker
                 </h1>
-                <form className={styles.form}>
+                <form className={styles.form}
+                      onSubmit={onSubmit}
+                >
                     <input className={styles.input}
-                           name={'ip'}
+                           name={'address'}
+                           placeholder={'Search for any IP address or domain'}
                     />
                     <button className={styles.submitButton}
                             type={'submit'}

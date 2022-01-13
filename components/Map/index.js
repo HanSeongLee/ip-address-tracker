@@ -11,7 +11,7 @@ const Map = ({ lat, lng }) => {
 
     return (
         <MapContainer center={[lat, lng]}
-                      zoom={24}
+                      zoom={18}
                       zoomControl={false}
         >
             <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
