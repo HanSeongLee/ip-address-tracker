@@ -10,6 +10,7 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [Useful resources](#useful-resources)
 - [Author](#author)
 
 ## Overview
@@ -50,7 +51,7 @@ Users should be able to:
 - [Sass/SCSS](https://sass-lang.com/) - For styles
 - [ipify](https://geo.ipify.org/) - Geo IP API
 - [JSON Test](http://ip.jsontest.com/) - Retuning current IP
-- [Leaflet API](https://leafletjs.com/) - An open-source JavaScript libarary for mobile-friendly interactive maps
+- [Leaflet API](https://leafletjs.com/) - An open-source JavaScript library for mobile-friendly interactive maps
 
 ### Useful resources
 
